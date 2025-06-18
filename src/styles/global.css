@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* Custom Colors */
+:root {
+  --color-primary: #1a001f; /* Fondo oscuro principal */
+  --color-accent-red: #ff0033; /* Acción o llamado a la atención */
+  --color-accent-green: #00ff66; /* Resaltado interactivo */
+  --color-accent-cyan: #00f0ff; /* Complemento visual moderno */
+  --color-text: #ffffff; /* Texto principal */
+  --color-purple: #9900cc; /* Detalles elegantes */
+}
+
+/* Custom Font */
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-cyan);
+}
+
+/* Smooth animations */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom Utility Classes */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-green) 0%,
+    var(--color-accent-cyan) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-cyan) 0%,
+    var(--color-purple) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-red {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-red) 0%,
+    var(--color-purple) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glow {
+  box-shadow: 0 0 20px var(--color-accent-cyan);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px var(--color-accent-red);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px var(--color-accent-green);
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

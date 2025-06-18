@@ -1,39 +1,67 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Brennis Benjaminn Castro - Full Stack Developer",
+  description = "Portfolio profesional de Brennis Benjaminn Castro, desarrollador full stack especializado en tecnologías modernas.",
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Brennis Benjaminn Castro" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>{title}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <slot />
+  <body
+    class="font-sans antialiased overflow-x-hidden"
+    style="background-color: var(--color-primary); color: var(--color-text);"
+  >
+    <!-- Background Pattern -->
+    <div class="fixed inset-0 -z-10">
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(to bottom right, var(--color-primary), rgba(153, 0, 204, 0.1), rgba(0, 240, 255, 0.05));"
+      >
+      </div>
+      <div
+        class="absolute inset-0 opacity-30"
+        style="background-image: radial-gradient(circle at 1px 1px, var(--color-purple) 1px, transparent 0); background-size: 40px 40px;"
+      >
+      </div>
+    </div>
+
+    <main class="min-h-screen">
+      <slot />
+    </main>
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    background-color: #f0f0f0;
-    color: #333;
-  }
-  body > * {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  body > *:first-child {
-    padding-top: 0;
-  }
-  body > *:last-child {
-    padding-bottom: 0;
-  }
-</style>
