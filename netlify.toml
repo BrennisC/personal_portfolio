@@ -1,0 +1,6 @@
+[build]
+command = "pnpmx astro build"
+publish = "dist"
+
+[functions]
+directory = "netlify/functions" # si usas funciones
