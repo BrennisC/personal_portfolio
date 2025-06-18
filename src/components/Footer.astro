@@ -29,7 +29,7 @@ interface SocialLinks {
         </p>
         <div class="flex space-x-4">
           <a
-            href={redesSociales.filter((red) => red.nombre === "GitHub")[0].url}
+            href={redesSociales.filter((red) => red.name === "GitHub")[0].url}
             target="_blank"
             rel="noopener noreferrer"
             class="text-slate-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
@@ -41,8 +41,7 @@ interface SocialLinks {
             </svg>
           </a>
           <a
-            href={redesSociales.filter((red) => red.nombre === "LinkedIn")[0]
-              .url}
+            href={redesSociales.filter((red) => red.name === "LinkedIn")[0].url}
             target="_blank"
             rel="noopener noreferrer"
             class="text-slate-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
