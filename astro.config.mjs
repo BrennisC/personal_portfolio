@@ -5,9 +5,17 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  outDir: './dist',
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+
+    build: {
+      rollupOptions: {
+        input: {
+          main: './src/pages/index.astro',
+
+        }
+      }
+    }
   },
-  site: 'https://example.com',
-  integrations: [],
 });
