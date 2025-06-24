@@ -75,7 +75,7 @@ interface SocialLinks {
 
       <!-- Quick Links -->
       <div>
-        <h3 class="text-white font-semibold mb-4">Enlaces rápidos</h3>
+        <h3 class="text-white font-semibold mb-6 py-1.5">Enlaces rápidos</h3>
         <ul class="space-y-2">
           <li>
             <a
@@ -100,39 +100,10 @@ interface SocialLinks {
           </li>
         </ul>
       </div>
-
-      <!-- Contact Info -->
-      <div>
-        <h3 class="text-white font-semibold mb-4">Contacto</h3>
-
-        {
-          redesSociales.map((red) => (
-            <div class="flex items-center mb-2" key={red.id}>
-              <svg
-                class="w-6 h-6 text-slate-400 mr-2"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <use href={`#icon-${red.name.toLowerCase()}`} />
-              </svg>
-              <a
-                href={red.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-slate-400 hover:text-white transition-colors duration-200"
-              >
-                {red.name}
-              </a>
-              <span class="ml-2 text-slate-400 text-sm">{red.url}</span>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-
+     
     <!-- Bottom Section -->
     <div
-      class="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+      class="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row items-start justify-between text-center md:text-left"
     >
       <p class="text-slate-400 text-sm">
         &copy; {new Date().getFullYear()} Brennis Benjaminn Castro. Todos los derechos
