@@ -81,6 +81,11 @@ export const skillCategories: SkillCategory[] = [
                 name: "Laravel",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
                 color: "#777BB4",
+            },
+            {
+                name: 'Python',
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+                color: "#092E20",
             }
         ]
     },
